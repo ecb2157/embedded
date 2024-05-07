@@ -8,7 +8,6 @@ void Decimal_Adjust(unsigned long Channel_No)
 {
 switch(Channel_No)
 
-53
 
 {
 case 0xa: SER_PutChar('0');
@@ -50,8 +49,6 @@ temp1 = 0;
 LPC_GPIO0->FIOPIN = ((LPC_GPIO0->FIOPIN & 0xFF807FFF) |
 (Channel_No | temp1));
 
-54
-
 for(i = 0; i <= 10000; i ++);
 temp = LPC_GPIO0->FIOPIN & 0x00800000;
 temp >>= 23;
@@ -88,8 +85,6 @@ GLCD_DisplayChar(6,12, __FI,Channel_No+ 0x30);
 }
 else if((Channel_No >= 0x0a) && (Channel_No <= 0x0f))
 {
-
-55
 
 SER_PutChar('1');
 GLCD_DisplayChar(6,11, __FI, '1');
@@ -131,7 +126,6 @@ Channel_No += 1;
 else if(c == '-')
 {
 
-56
 
 if(Channel_No == 0)
 
