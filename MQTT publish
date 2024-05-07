@@ -1,0 +1,15 @@
+import time
+import paho.mqtt.publish as publish
+publish.single(&quot;ETS/IOTKIT/RELAY&quot;, &quot;ON1&quot;,hostname=&quot;test.mosquitto.org&quot;)
+time.sleep(5)
+publish.single(&quot;ETS/IOTKIT/RELAY&quot;,&quot;OFF1&quot;,hostname=&quot;test.mosquitto.org&quot;)
+time.sleep(5)
+publish.single(&quot;ETS/IOTKIT/RELAY&quot;, &quot;ON2&quot;,hostname=&quot;test.mosquitto.org&quot;)
+time.sleep(5)
+publish.single(&quot;ETS/IOTKIT/RELAY&quot;,&quot;OFF2&quot;,hostname=&quot;test.mosquitto.org&quot;)
+time.sleep(5)
+publish.single(&quot;ETS/IOTKIT/RELAY&quot;, &quot;ON3&quot;,hostname=&quot;test.mosquitto.org&quot;)
+time.sleep(5)
+publish.single(&quot;ETS/IOTKIT/RELAY&quot;,&quot;OFF3&quot;,hostname=&quot;test.mosquitto.org&quot;)
+time.sleep(5)
+print(&quot;Done&quot;)
